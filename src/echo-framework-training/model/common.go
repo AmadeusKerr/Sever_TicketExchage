@@ -45,10 +45,10 @@ type Department struct {
 }
 
 func ConnectDB() (db *sql.DB) {
-	DBMS := "mysql"
-	USER := "amadeus"
-	PASS := "Yama-noku1412"
-	PROTOCOL := "tcp(localhost:3306)"
+	DBMS := "MariaDB"
+	USER := "root"
+	PASS := "yamanoku"
+	PROTOCOL := "tcp(http://10.0.2.20:3306)"
 	DBNAME := "db_server"
 
 	CONNECT := USER + ":" + PASS + "@" + PROTOCOL + "/" + DBNAME

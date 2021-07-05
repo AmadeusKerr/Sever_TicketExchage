@@ -39,7 +39,7 @@ func main() {
 	// CORSの設定追加
 	// 厳密にCORSを設定する（以下公式のサンプルコード）
 	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
-		AllowOrigins: []string{"http://127.0.0.1", "http://192.168.1.26"},
+		// AllowOrigins: []string{"http://127.0.0.1", "http://192.168.1.26"},
 		AllowMethods: []string{http.MethodGet, http.MethodPut, http.MethodPost, http.MethodDelete},
 		AllowHeaders: []string{
 			"Access-Control-Allow-Credentials",
