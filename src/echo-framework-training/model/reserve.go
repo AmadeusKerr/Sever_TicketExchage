@@ -49,7 +49,7 @@ func ReserveTicket(info *ReserveInfo) string {
 	}
 	// TODO ユーザーレコードのIDを取得
 	User_ID := "100000"
-	User_Code := "\"v36zc93cuicx\""
+	User_Code := "'v36zc93cuicx'"
 	rowQuery := "select * from reserve_table where user_id=" + User_ID + " && member_id=" + member_id + " && venue_id=" + venue_id + " && type_id=" + type_id + " && department_id=" + department_id
 	println(rowQuery)
 	row := db.QueryRow(rowQuery)
