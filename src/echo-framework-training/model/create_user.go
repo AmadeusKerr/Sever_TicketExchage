@@ -41,7 +41,7 @@ func CreateUser(info *CreateUserInfo) interface{} {
 	id := strconv.Itoa((userIdInt + 1))
 	user.UserId = id
 
-	query := "insert into db_server.usr_table (user_code, first_name, last_name, password, mail, postal_code, address, phone_number, talk_pt, cheki_pt, sigh_pt, create_at, update_at) values (?,?,?,?,?,?,?,?,?,?)"
+	query := "insert into db_server.usr_table (user_code, first_name, last_name, password, mail, postal_code, address, phone_number, talk_pt, cheki_pt, sign_pt, create_at, update_at) values (?,?,?,?,?,?,?,?,?,?)"
 	ins, err := db.Prepare(query)
 	if err != nil {
 		panic(err.Error())
