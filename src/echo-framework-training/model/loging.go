@@ -20,8 +20,8 @@ func UserLogIn(info *LoginData) (interface{}, bool) {
 	user := UserInfo{}
 	db := ConnectDB()
 	println(info.Email)
-	row := db.QueryRow("select user_id, user_code, password, mail, talk_pt, cheki_pt, sign_pt from db_server.usr_table where mail=\"" + info.Email + "\" && password=\"" + info.PassWord + "\"")
-	text := "select user_id, user_code, usr_name, password, mail from db_server.usr_table where mail=\"" + info.Email + "\" && password=\"" + info.PassWord + "\""
+	row := db.QueryRow("select user_id, user_code, password, mail, talk_pt, cheki_pt, sign_pt from db_server.usr_table where mail='" + info.Email + "\" && password='" + info.PassWord + "'")
+	text := "select user_id, user_code, usr_name, password, mail from db_server.usr_table where mail='" + info.Email + "' && password='" + info.PassWord + "\""
 	println(text)
 	if err := row.Scan(&user.UserID, &user.UserCode, &user.PassWord, &user.Mail, &user.TalkPoint, &user.ChekiPoint, &user.SignPoint); err != nil {
 		// ここでエラー出てる

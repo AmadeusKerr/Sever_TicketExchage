@@ -165,7 +165,7 @@ type UserData struct {
 
 func GetUserData(holder *UserIdHolder) interface{} {
 	db := ConnectDB()
-	row := db.QueryRow("select * from usr_table where user_id=" + holder.UserId)
+	row := db.QueryRow("select * db_server.from usr_table where user_id=" + holder.UserId)
 	data := UserData{}
 	err := row.Scan(&data.UserID, &data.UserCode, &data.FirstName, &data.LastName, &data.PassWord,
 		&data.Mail, &data.PostCode, &data.Address, &data.Phone, &data.TalkPoint, &data.ChekiPoint, &data.SignPoint, &data.CreateAt, &data.UpdateAt)
